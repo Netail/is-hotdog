@@ -6,7 +6,11 @@
 	"files": ["dist"],
 	"main": "dist/index.js",
 	"packageManager": "yarn@1.22.22",
+	"bin": {
+		"is-hotdog": "dist/cli.js"
+	},
 	"scripts": {
+		"start": "node dist/index.mjs",
 		"build": "tsup --config tsup.config.json",
 		"dev": "tsup --config tsup.config.json --watch",
 		"format": "biome format --write",
@@ -16,7 +20,13 @@
 		"type": "git",
 		"url": "git+https://github.com/Netail/turbo-kit.git"
 	},
-	"keywords": ["Hotdog"],
+	"keywords": ["Hotdog", "AI"],
+	"dependencies": {
+		"@ai-sdk/deepseek": "^0.1.6",
+		"ai": "^4.1.11",
+		"commander": "^13.1.0",
+		"zod": "^3.24.1"
+	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@types/node": "^22.12.0",
