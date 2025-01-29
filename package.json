@@ -1,0 +1,27 @@
+{
+	"name": "is-hotdog",
+	"version": "0.1.0",
+	"description": "Is this a hotdog?",
+	"license": "MIT",
+	"files": ["dist"],
+	"main": "dist/index.js",
+	"packageManager": "yarn@1.22.22",
+	"scripts": {
+		"build": "tsup --config tsup.config.json",
+		"dev": "tsup --config tsup.config.json --watch",
+		"format": "biome format --write",
+		"prepare": "husky || true"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Netail/turbo-kit.git"
+	},
+	"keywords": ["Hotdog"],
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@types/node": "^22.12.0",
+		"husky": "^9.1.7",
+		"tsup": "^8.3.6",
+		"typescript": "^5.7.3"
+	}
+}
